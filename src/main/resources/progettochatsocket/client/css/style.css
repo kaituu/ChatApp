@@ -1,0 +1,27 @@
+.dark-gray-background{
+    -fx-background-color: #46474A;
+}
+
+.gray-background{
+    -fx-background-color: #636566;
+}
+
+.transparent-background{
+    
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+ }
+
+.light-gray-background{
+    -fx-background-color: #DADADA;
+}
+
+.radius{
+    -fx-background-radius: 100px;
+    -fx-text-fill: white;
+}
+
+

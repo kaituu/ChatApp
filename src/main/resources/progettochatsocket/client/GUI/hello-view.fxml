@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="702.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/19"
+            fx:controller="progettochatsocket.client.ChatController">
+    <left>
+        <Pane prefHeight="702.0" prefWidth="327.0" style="-fx-background-color: #5E6061;"
+              stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="702.0" prefWidth="88.0" styleClass="dark-gray-background"
+                      stylesheets="@../css/style.css">
+                    <children>
+                        <ImageView fitHeight="48.0" fitWidth="38.0" onMouseClicked="#esci" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../img/close_480px.png"/>
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0"/>
+                            </VBox.margin>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <TextField fx:id="inputUtente" layoutX="97.0" layoutY="18.0" prefHeight="42.0" prefWidth="170.0"
+                           promptText="Nuovo Utente" style="-fx-background-color: #46474A;"
+                           stylesheets="@../css/style.css">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="transparent-background"/>
+                        <String fx:value="radius"/>
+                    </styleClass>
+                </TextField>
+                <ImageView fx:id="chiave" fitHeight="32.0" fitWidth="37.0" layoutX="281.0" layoutY="23.0"
+                           onMouseClicked="#bottoneNuovoUtente" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/key_480px.png"/>
+                    </image>
+                </ImageView>
+                <ScrollPane layoutX="89.0" layoutY="68.0" prefHeight="632.0" prefWidth="235.0"
+                            style="-fx-background-color: #5E6061;" stylesheets="@../css/style.css">
+                    <content>
+                        <VBox fx:id="listaUtenti" prefHeight="625.0" prefWidth="227.0"/>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="200.0" styleClass="dark-gray-background"
+                      stylesheets="@../css/style.css">
+                    <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="SOMETIMES"/>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/coderwall_480px.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <ScrollPane prefHeight="575.0" prefWidth="671.0" style="-fx-background-color: gray;"
+                            stylesheets="@../css/style.css">
+                    <content>
+                        <VBox fx:id="chatMessaggi" prefHeight="556.0" prefWidth="678.0" spacing="7.0">
+                            <padding>
+                                <Insets bottom="20.0" left="15.0" right="15.0" top="10.0"/>
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="gray-background"
+                      stylesheets="@../css/style.css">
+                    <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/file_480px.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="15.0" right="15.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                        <TextField fx:id="inputMessaggio" prefHeight="48.0" prefWidth="578.0"
+                                   promptText="Scrivi un messaggio" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Ebrima" size="18.0"/>
+                            </font>
+                            <styleClass>
+                                <String fx:value="radius"/>
+                                <String fx:value="dark-gray-background"/>
+                            </styleClass>
+                        </TextField>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#bottoneInviaMessaggio"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/telegram_app_144px.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="15.0" right="15.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
